@@ -2,8 +2,7 @@
   "include": [
     "**/*",
     "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
+    "**/.client/**/*"
   ],
   "exclude": [
     "firebase/**",
@@ -16,10 +15,10 @@
     "module": "ES2022",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "rootDirs": [".", "./.react-router/types"],
+    "rootDirs": ["."],
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./src/*"]
     },
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
