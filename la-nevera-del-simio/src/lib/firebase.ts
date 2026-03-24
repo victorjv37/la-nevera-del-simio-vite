@@ -11,6 +11,14 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
+if (!firebaseConfig.apiKey) {
+  console.error(
+    "🔥 ERROR CRÍTICO: Firebase API Key no encontrada (auth/invalid-api-key).\n" +
+    "Si estás en local, asegúrate de que el archivo .env existe en la raíz y tiene VITE_FIREBASE_API_KEY.\n" +
+    "Si has desplegado en Vercel, Netlify o Firebase Hosting, asegúrate de haber configurado las VARIABLES DE ENTORNO allí."
+  );
+}
+
 // Singleton — safe for HMR
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 

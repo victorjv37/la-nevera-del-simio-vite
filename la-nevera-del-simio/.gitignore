@@ -5,4 +5,5 @@
 # React Router
 /.react-router/
 /build/
+/dist/
 /la-nevera-del-simio/firebase-scripts/*.json
