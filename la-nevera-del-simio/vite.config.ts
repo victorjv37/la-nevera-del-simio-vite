@@ -1,0 +1,26 @@
+import { reactRouter } from "@react-router/dev/vite";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    reactRouter(),
+    tsconfigPaths(),
+    // Silence Chrome DevTools internal requests that React Router can't handle
+    {
+      name: 'silence-devtools',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url?.startsWith('/.well-known/')) {
+            res.writeHead(204);
+            res.end();
+            return;
+          }
+          next();
+        });
+      },
+    },
+  ],
+});
