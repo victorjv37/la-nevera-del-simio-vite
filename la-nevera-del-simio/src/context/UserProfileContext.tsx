@@ -56,3 +56,4 @@ export function useUserProfile() {
   if (!ctx) throw new Error('useUserProfile must be used inside UserProfileProvider');
   return ctx;
 }
+

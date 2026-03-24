@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import {
   ChevronRight, ChevronLeft, Check,
   Ruler, Weight, Activity, Target, Flame, Scale,
@@ -277,3 +277,4 @@ export default function OnboardingScreen() {
     </div>
   );
 }
+

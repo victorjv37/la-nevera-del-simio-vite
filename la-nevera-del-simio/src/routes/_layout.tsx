@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from 'react-router';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { AuthProvider, useAuth } from '~/context/AuthContext';
 import { UserProfileProvider, useUserProfile } from '~/context/UserProfileContext';
@@ -57,3 +57,4 @@ export default function AppLayout() {
     </AuthProvider>
   );
 }
+

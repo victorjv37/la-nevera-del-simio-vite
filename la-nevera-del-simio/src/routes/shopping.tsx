@@ -5,7 +5,7 @@ import { useFood } from '~/context/FoodContext';
 import { buildShoppingListFromPlan, groupByCategory, getCategoryColor } from '~/lib/helpers';
 import { NUTRITIONAL_CATEGORIES } from '~/lib/constants';
 import { CATEGORY_ICON_MAP } from '~/lib/icons';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 export function meta() {
     return [
@@ -200,3 +200,4 @@ export default function ShoppingScreen() {
         </main>
     );
 }
+

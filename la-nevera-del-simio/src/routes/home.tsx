@@ -1,9 +1,5 @@
-import { redirect } from 'react-router';
-
-export function loader() {
-  return redirect('/fridge');
-}
+import { Navigate } from 'react-router-dom';
 
 export default function Home() {
-  return null;
+  return <Navigate to="/fridge" replace />;
 }

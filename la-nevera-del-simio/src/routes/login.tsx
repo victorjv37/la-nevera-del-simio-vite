@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, LogIn, UserPlus, Leaf } from 'lucide-react';
 import { useAuth } from '~/context/AuthContext';
 
@@ -219,3 +219,4 @@ export default function LoginScreen() {
     </div>
   );
 }
+

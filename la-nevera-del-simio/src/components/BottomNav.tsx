@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { Refrigerator, UtensilsCrossed, ShoppingCart } from 'lucide-react';
 
 const tabs = [
@@ -24,3 +24,4 @@ export default function BottomNav() {
         </nav>
     );
 }
+

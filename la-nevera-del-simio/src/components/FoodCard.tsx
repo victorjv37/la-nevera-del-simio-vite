@@ -80,3 +80,4 @@ export default function FoodCard({ food, onDelete }: Props) {
         </article>
     );
 }
+

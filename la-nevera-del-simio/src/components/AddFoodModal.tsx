@@ -212,3 +212,4 @@ export default function AddFoodModal({ onClose, preselectedCategory }: Props) {
         </div>
     );
 }
+

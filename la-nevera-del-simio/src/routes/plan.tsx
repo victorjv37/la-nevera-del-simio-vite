@@ -8,7 +8,7 @@ import { useFood } from '~/context/FoodContext';
 import { useUserProfile } from '~/context/UserProfileContext';
 import PlanView from '~/components/PlanView';
 import type { PlanGoal } from '~/lib/types';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 export function meta() {
   return [
@@ -179,3 +179,4 @@ export default function PlanScreen() {
     </main>
   );
 }
+

@@ -92,3 +92,4 @@ export function usePlan() {
   if (!ctx) throw new Error('usePlan must be used inside PlanProvider');
   return ctx;
 }
+

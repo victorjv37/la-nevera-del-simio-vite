@@ -87,3 +87,4 @@ export function useFood() {
   if (!ctx) throw new Error('useFood must be used inside FoodProvider');
   return ctx;
 }
+

@@ -121,3 +121,4 @@ export default function FoodListModal({ categoryId, onClose }: Props) {
         </>
     );
 }
+

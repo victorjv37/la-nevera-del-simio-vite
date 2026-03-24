@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { Refrigerator, Plus, LogOut, Camera } from 'lucide-react';
 import { useFood } from '~/context/FoodContext';
 import { useAuth } from '~/context/AuthContext';
@@ -147,3 +147,4 @@ export default function FridgeScreen() {
     </main>
   );
 }
+

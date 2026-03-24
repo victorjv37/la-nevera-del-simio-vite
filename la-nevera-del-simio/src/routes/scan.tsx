@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import {
   Camera, Trash2, Plus, Check, ChevronLeft,
   AlertCircle, Loader2, ScanLine, CalendarDays,
@@ -466,3 +466,4 @@ export default function ScanScreen() {
     </main>
   );
 }
+
