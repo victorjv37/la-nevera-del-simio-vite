@@ -2,15 +2,20 @@ const admin = require('firebase-admin');
 const path = require('path');
 const fs = require('fs');
 
-// 🔐 Cargar clave privada
-const serviceAccount = require('../la-nevera-del-simio-firebase-adminsdk-fbsvc-2f156cfcd6.json');
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 // 📦 Cargar JSON de alimentos
 const foodsSeed = require('../../assets/foodJsons/foodSeed.json');
 
 // 🚀 Inicializar Firebase Admin
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert({
+        projectId: process.env.CLOUD_PROJECT_ID,
+        clientEmail: process.env.CLOUD_CLIENT_EMAIL,
+        privateKey: process.env.CLOUD_PRIVATE_KEY
+            ? process.env.CLOUD_PRIVATE_KEY.replace(/\\n/g, '\n')
+            : undefined,
+    }),
 });
 
 const db = admin.firestore();
